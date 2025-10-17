@@ -379,11 +379,42 @@
             border: 1px solid rgba(0, 180, 216, 0.2);
             font-weight: 500;
             transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-tag::after {
+            content: '🔍';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%) scale(0.8);
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 0.8em;
+        }
+
+        .skill-tag:hover::after {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
         }
 
         .skill-tag:hover {
-            background: rgba(0, 180, 216, 0.2);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+            background: rgba(0, 180, 216, 0.2) !important;
+        }
+
+        /* Pulse animation for clicked skills */
+        @keyframes skillPulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 180, 216, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+        }
+
+        .skill-tag:active {
+            animation: skillPulse 0.5s;
         }
 
         /* === Experience Section === */
@@ -826,9 +857,9 @@
                         <i class="fas fa-code-branch"></i>
                         Explore My Work
                     </a>
-                    <a href="Resume.pdf" class="btn btn-outline">
+                    <a href="#contact" class="btn btn-outline">
                         <i class="fas fa-file-alt"></i>
-                        View Comprehensive CV
+                        Contact Me
                     </a>
                 </div>
             </div>
@@ -840,47 +871,116 @@
         <div class="container">
             <div class="section-header">
                 <h2>Technical Skills</h2>
-                <p>A comprehensive suite of technologies and methodologies for full-stack development and data engineering</p>
+                <p>A comprehensive suite of technologies and methodologies for full-stack development, data engineering, and cybersecurity</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3><i class="fas fa-layer-group"></i> Core Technologies</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag" data-target="projects">Python</span>
+                        <span class="skill-tag" data-target="projects">Java</span>
+                        <span class="skill-tag" data-target="experience">JavaScript</span>
+                        <span class="skill-tag" data-target="projects">SQL</span>
+                        <span class="skill-tag" data-target="experience">HTML5/CSS3</span>
+                        <span class="skill-tag" data-target="projects">REST APIs</span>
+                        <span class="skill-tag" data-target="projects">Git</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <h3><i class="fas fa-tools"></i> Frameworks & Platforms</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Android SDK</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag" data-target="projects">Spring Boot</span>
+                        <span class="skill-tag" data-target="experience">React</span>
+                        <span class="skill-tag" data-target="projects">Node.js</span>
+                        <span class="skill-tag" data-target="projects">Android SDK</span>
+                        <span class="skill-tag" data-target="projects">Firebase</span>
+                        <span class="skill-tag" data-target="projects">Docker</span>
+                        <span class="skill-tag" data-target="projects">Django</span>
+                        <span class="skill-tag" data-target="projects">Azure Cloud</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <h3><i class="fas fa-chart-line"></i> Data & Analytics</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">SQLite</span>
-                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag" data-target="projects">Pandas</span>
+                        <span class="skill-tag" data-target="projects">NumPy</span>
+                        <span class="skill-tag" data-target="projects">scikit-learn</span>
+                        <span class="skill-tag" data-target="projects">MySQL</span>
+                        <span class="skill-tag" data-target="projects">SQLite</span>
+                        <span class="skill-tag" data-target="projects">Data Visualization</span>
+                        <span class="skill-tag" data-target="projects">PySpark</span>
+                        <span class="skill-tag" data-target="projects">ETL Pipelines</span>
+                        <span class="skill-tag" data-target="projects">Data Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-robot"></i> Machine Learning & AI</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" data-target="experience">Machine Learning</span>
+                        <span class="skill-tag" data-target="projects">Deep Learning</span>
+                        <span class="skill-tag" data-target="projects">CNN</span>
+                        <span class="skill-tag" data-target="projects">Random Forest</span>
+                        <span class="skill-tag" data-target="projects">XGBoost</span>
+                        <span class="skill-tag" data-target="academics">NLP</span>
+                        <span class="skill-tag" data-target="academics">BERT</span>
+                        <span class="skill-tag" data-target="experience">Model Evaluation</span>
+                        <span class="skill-tag" data-target="experience">Feature Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-shield-alt"></i> Security & Cryptography</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" data-target="academics">Cybersecurity</span>
+                        <span class="skill-tag" data-target="experience">Network Security</span>
+                        <span class="skill-tag" data-target="projects">Cryptography</span>
+                        <span class="skill-tag" data-target="projects">AES Encryption</span>
+                        <span class="skill-tag" data-target="projects">TOTP</span>
+                        <span class="skill-tag" data-target="projects">Digital Forensics</span>
+                        <span class="skill-tag" data-target="experience">Vulnerability Assessment</span>
+                        <span class="skill-tag" data-target="experience">Penetration Testing</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" data-target="projects">Azure Data Factory</span>
+                        <span class="skill-tag" data-target="projects">Azure Databricks</span>
+                        <span class="skill-tag" data-target="projects">Azure Synapse</span>
+                        <span class="skill-tag" data-target="projects">Cloud Computing</span>
+                        <span class="skill-tag" data-target="projects">Big Data Analytics</span>
+                        <span class="skill-tag" data-target="projects">CI/CD</span>
+                        <span class="skill-tag" data-target="projects">Containerization</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-mobile"></i> Mobile & Web Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" data-target="projects">Android Development</span>
+                        <span class="skill-tag" data-target="experience">Responsive Design</span>
+                        <span class="skill-tag" data-target="experience">Single Page Applications</span>
+                        <span class="skill-tag" data-target="projects">Material Design</span>
+                        <span class="skill-tag" data-target="projects">Google Maps API</span>
+                        <span class="skill-tag" data-target="experience">Performance Optimization</span>
+                        <span class="skill-tag" data-target="experience">Cross-browser Compatibility</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-cogs"></i> Specialized Domains</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" data-target="academics">Blockchain Technology</span>
+                        <span class="skill-tag" data-target="academics">Cryptocurrency</span>
+                        <span class="skill-tag" data-target="academics">Digital Payments</span>
+                        <span class="skill-tag" data-target="projects">IoT Systems</span>
+                        <span class="skill-tag" data-target="projects">GPS Tracking</span>
+                        <span class="skill-tag" data-target="projects">Healthcare Applications</span>
+                        <span class="skill-tag" data-target="projects">Supply Chain Management</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Experience Section -->
+    <!-- Experience Section -->
     <section id="experience" class="experience bg-pattern">
         <div class="container">
             <div class="section-header">
@@ -923,7 +1023,7 @@
                         <li>Learned cryptographic techniques including symmetric and asymmetric encryption, digital signatures, and SSL/TLS protocols</li>
                         <li>Participated in hands-on labs for network monitoring, traffic analysis, and security incident response</li>
                         <li>Achieved Grade A+ for exceptional performance and demonstrated expertise in network security concepts</li>
-                        <li><a href="Network Security Internship.jpeg" target="_blank" class="btn btn-outline">
+                        <li><a href="#academics" class="btn btn-outline">
                             <i class="fas fa-certificate"></i>Network Security Certificate</a>
                         </li>
                     </ul>
@@ -944,7 +1044,7 @@
                         <li>Developed predictive models using Python libraries including Pandas, NumPy, and Scikit-learn for real-world datasets</li>
                         <li>Gained hands-on experience in model evaluation metrics, cross-validation, and hyperparameter tuning</li>
                         <li>Achieved Grade A+ for outstanding performance and comprehensive understanding of ML concepts</li>
-                        <li><a href="Data Science & Machine Learning Internship.jpeg" target="_blank" class="btn btn-outline">
+                        <li><a href="#academics" class="btn btn-outline">
                             <i class="fas fa-certificate"></i>Data Science & Machine Learning Certificate</a>
                         </li>
                     </ul>
@@ -953,7 +1053,7 @@
         </div>
     </section>
 
-       <!-- Projects Section -->
+    <!-- Projects Section -->
     <section id="projects" class="bg-pattern">
         <div class="container">
             <div class="section-header">
@@ -977,9 +1077,9 @@
                             <strong>Engineering Achievement:</strong> 30% reduction in user tracking errors through optimized notification algorithms
                         </div>
                         <div class="project-links">
-                            <a href="Pill Reminder.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>
                         </div>
                     </div>
@@ -1000,9 +1100,9 @@
                             <strong>Performance Metric:</strong> 25% improvement in location accuracy through advanced data processing algorithms
                         </div>
                         <div class="project-links">
-                            <a href="VEHICLE TRACKING.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>    
                         </div>
                     </div>
@@ -1023,9 +1123,9 @@
                             <strong>Security Excellence:</strong> Multi-layered encryption with dynamic authentication and brute-force protection
                         </div>
                         <div class="project-links">
-                            <a href="Dynamic OTP-Based Secure Message Locker.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>
                         </div>
                     </div>
@@ -1046,9 +1146,9 @@
                             <strong>ML Achievement:</strong> 90% classification accuracy using ensemble methods and CNN architectures
                         </div>
                         <div class="project-links">
-                            <a href="Identifying the Genre of a Song.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>
                         </div>
                     </div>
@@ -1069,9 +1169,9 @@
                             <strong>Prediction Accuracy:</strong> 96% accurate traffic forecasting using ensemble learning methods
                         </div>
                         <div class="project-links">
-                            <a href="Predicting Traffic Condition.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>
                         </div>
                     </div>
@@ -1092,9 +1192,9 @@
                             <strong>Data Engineering:</strong> Scalable cloud architecture handling large-scale sports analytics
                         </div>
                         <div class="project-links">
-                            <a href="Olympic Data Analytics.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>
                         </div>
                     </div>
@@ -1115,9 +1215,9 @@
                             <strong>Forensic Analysis:</strong> Advanced file system dissection and evidence correlation techniques
                         </div>
                         <div class="project-links">
-                            <a href="Autopsy's Features Analysis.pdf" class="btn btn-outline">
+                            <a href="#skills" class="btn btn-outline">
                                 <i class="fas fa-code"></i>
-                                Technical Documentation
+                                View Skills Used
                             </a>
                         </div>
                     </div>
@@ -1126,114 +1226,115 @@
         </div>
     </section>
 
-        <!-- Academic Contributions & Certifications Section -->
-<section id="academics" class="bg-pattern">
-    <div class="container">
-        <div class="section-header">
-            <h2>Academic Contributions & Certifications</h2>
-            <p>Continuous learning through research, seminars, and professional certifications</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-coins"></i>
+    <!-- Academic Contributions & Certifications Section -->
+    <section id="academics" class="bg-pattern">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Contributions & Certifications</h2>
+                <p>Continuous learning through research, seminars, and professional certifications</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="project-title">
+                                <h3>Cryptocurrency Seminar Presentation</h3>
+                                <div class="project-tech">Blockchain Technology • Digital Currency • Financial Systems</div>
+                            </div>
                         </div>
-                        <div class="project-title">
-                            <h3>Cryptocurrency Seminar Presentation</h3>
-                            <div class="project-tech">Blockchain Technology • Digital Currency • Financial Systems</div>
+                        <p class="project-description">Presented a comprehensive technical seminar on cryptocurrency as part of my Bachelor's degree requirements. This in-depth research covered the fundamental principles of digital currencies, blockchain architecture, and their disruptive potential in traditional financial systems.</p>
+                        
+                        <div class="project-result">
+                            <strong>Key Research Contributions:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                                <li>Analyzed cryptocurrency architecture including blockchain technology, peer-to-peer networks, and cryptographic security</li>
+                                <li>Examined real-world applications from peer-to-peer payments to decentralized finance (DeFi)</li>
+                                <li>Evaluated advantages (decentralization, security, global accessibility) and limitations (volatility, scalability, regulatory challenges)</li>
+                                <li>Explored future scope including CBDCs, mainstream adoption, and environmental sustainability improvements</li>
+                            </ul>
                         </div>
-                    </div>
-                    <p class="project-description">Presented a comprehensive technical seminar on cryptocurrency as part of my Bachelor's degree requirements. This in-depth research covered the fundamental principles of digital currencies, blockchain architecture, and their disruptive potential in traditional financial systems.</p>
-                    
-                    <div class="project-result">
-                        <strong>Key Research Contributions:</strong>
-                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li>Analyzed cryptocurrency architecture including blockchain technology, peer-to-peer networks, and cryptographic security</li>
-                            <li>Examined real-world applications from peer-to-peer payments to decentralized finance (DeFi)</li>
-                            <li>Evaluated advantages (decentralization, security, global accessibility) and limitations (volatility, scalability, regulatory challenges)</li>
-                            <li>Explored future scope including CBDCs, mainstream adoption, and environmental sustainability improvements</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="CryptoCurrency-SeminarProject.pdf" class="btn btn-outline">
-                            <i class="fas fa-file-pdf"></i>
-                            Full Seminar Report
-                        </a>
+                        
+                        <div class="project-links">
+                            <a href="#skills" class="btn btn-outline">
+                                <i class="fas fa-file-pdf"></i>
+                                View Related Skills
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-shield-alt"></i>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="project-title">
+                                <h3>Cybersecurity Course Completion</h3>
+                                <div class="project-tech">Network Security • Threat Analysis • Security Protocols</div>
+                            </div>
                         </div>
-                        <div class="project-title">
-                            <h3>Cybersecurity Course Completion</h3>
-                            <div class="project-tech">Network Security • Threat Analysis • Security Protocols</div>
+                        <p class="project-description">Successfully completed a comprehensive cybersecurity certification program, gaining expertise in fundamental security principles, threat mitigation strategies, and defensive security measures for modern digital infrastructure.</p>
+                        
+                        <div class="project-result">
+                            <strong>Course Coverage & Skills Developed:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                                <li>Network security fundamentals and vulnerability assessment</li>
+                                <li>Cryptographic techniques including encryption and digital signatures</li>
+                                <li>Security protocols implementation and best practices</li>
+                                <li>Threat analysis methodologies and risk assessment frameworks</li>
+                                <li>Incident response procedures and security auditing techniques</li>
+                            </ul>
                         </div>
-                    </div>
-                    <p class="project-description">Successfully completed a comprehensive cybersecurity certification program, gaining expertise in fundamental security principles, threat mitigation strategies, and defensive security measures for modern digital infrastructure.</p>
-                    
-                    <div class="project-result">
-                        <strong>Course Coverage & Skills Developed:</strong>
-                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li>Network security fundamentals and vulnerability assessment</li>
-                            <li>Cryptographic techniques including encryption and digital signatures</li>
-                            <li>Security protocols implementation and best practices</li>
-                            <li>Threat analysis methodologies and risk assessment frameworks</li>
-                            <li>Incident response procedures and security auditing techniques</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="Cybersecurity Certificate.jpeg" class="btn btn-outline">
-                            <i class="fas fa-certificate"></i>
-                            View Certificate
-                        </a>
+                        
+                        <div class="project-links">
+                            <a href="#skills" class="btn btn-outline">
+                                <i class="fas fa-certificate"></i>
+                                View Related Skills
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-file-alt"></i>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="project-title">
+                                <h3>Research Paper Review: BERT for Sustainable Software Engineering</h3>
+                                <div class="project-tech">BERT • NLP • Software Requirements • Green Computing</div>
+                            </div>
                         </div>
-                        <div class="project-title">
-                            <h3>Research Paper Review: BERT for Sustainable Software Engineering</h3>
-                            <div class="project-tech">BERT • NLP • Software Requirements • Green Computing</div>
+                        <p class="project-description">Conducted a critical analysis of Ahmad F. Subahi's research paper "BERT-Based Approach for Greening Software Requirements Engineering Through Non-Functional Requirements" as part of CIS 580 - Paradigmatic Software Development coursework.</p>
+                        
+                        <div class="project-result">
+                            <strong>Critical Analysis & Insights:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                                <li>Evaluated the novel integration of BERT models for classifying Non-Functional Requirements (NFRs) related to sustainability</li>
+                                <li>Analyzed the expansion of PROMISE_exp dataset with socioeconomic and eco-technical sustainability factors</li>
+                                <li>Assessed the framework's potential to bridge software engineering practices with environmental sustainability goals</li>
+                                <li>Examined performance metrics (accuracy, precision, recall, F1 score) of the BERT-based classification model</li>
+                                <li>Identified implications for automated sustainability-driven software development processes</li>
+                            </ul>
                         </div>
-                    </div>
-                    <p class="project-description">Conducted a critical analysis of Ahmad F. Subahi's research paper "BERT-Based Approach for Greening Software Requirements Engineering Through Non-Functional Requirements" as part of CIS 580 - Paradigmatic Software Development coursework.</p>
-                    
-                    <div class="project-result">
-                        <strong>Critical Analysis & Insights:</strong>
-                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li>Evaluated the novel integration of BERT models for classifying Non-Functional Requirements (NFRs) related to sustainability</li>
-                            <li>Analyzed the expansion of PROMISE_exp dataset with socioeconomic and eco-technical sustainability factors</li>
-                            <li>Assessed the framework's potential to bridge software engineering practices with environmental sustainability goals</li>
-                            <li>Examined performance metrics (accuracy, precision, recall, F1 score) of the BERT-based classification model</li>
-                            <li>Identified implications for automated sustainability-driven software development processes</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="BERT-BAsed Approach (Review of Research Paper).pdf" class="btn btn-outline">
-                            <i class="fas fa-graduation-cap"></i>
-                            Complete Review Document
-                        </a>
+                        
+                        <div class="project-links">
+                            <a href="#skills" class="btn btn-outline">
+                                <i class="fas fa-graduation-cap"></i>
+                                View Related Skills
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="bg-pattern">
         <div class="container">
@@ -1286,5 +1387,51 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Skill click functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillTags = document.querySelectorAll('.skill-tag');
+            
+            skillTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetSection);
+                    
+                    if (targetElement) {
+                        // Add visual feedback
+                        this.style.transform = 'scale(0.95)';
+                        this.style.backgroundColor = 'rgba(0, 180, 216, 0.3)';
+                        
+                        // Scroll to section
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Reset animation after click
+                        setTimeout(() => {
+                            this.style.transform = '';
+                            this.style.backgroundColor = '';
+                        }, 300);
+                    }
+                });
+            });
+
+            // Enhanced smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
