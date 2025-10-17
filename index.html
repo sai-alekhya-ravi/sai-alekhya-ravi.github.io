@@ -269,6 +269,72 @@
             box-shadow: 0 8px 25px rgba(0, 180, 216, 0.2);
             background: rgba(0, 180, 216, 0.05);
         }
+        /* === Hero Section with Picture === */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px; /* Changed from 850px */
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    background: linear-gradient(45deg, var(--accent), var(--accent-secondary));
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 180, 216, 0.3);
+}
+
+/* Responsive design for hero section */
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        flex: 0 0 auto;
+    }
+    
+    .profile-picture {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 240px;
+        height: 240px;
+    }
+}
 
         /* === Section Headers === */
         .section-header {
@@ -843,9 +909,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero bg-pattern">
-        <div class="container">
+    <!-- Hero Section -->
+<section class="hero bg-pattern">
+    <div class="container">
+        <div class="hero-container">
             <div class="hero-content">
+                <!-- Your existing hero content stays exactly the same -->
                 <div class="hero-badge">
                     <i class="fas fa-graduation-cap"></i>
                     Master's in Computer & Information Science
@@ -863,8 +932,12 @@
                     </a>
                 </div>
             </div>
+            <div class="hero-image">
+                <img src="DSC_7119.jpg" alt="Sai Alekhya Ravi" class="profile-picture">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="bg-pattern">
