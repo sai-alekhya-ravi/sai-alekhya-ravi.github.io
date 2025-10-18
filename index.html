@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Alekhya Ravi - Software Engineer & CS Graduate</title>
+    <title>Sai Alekhya Ravi - Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -173,7 +173,7 @@
 
         /* Section Headers */
         .section-header {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             padding-left: 2rem;
             border-left: 1px solid #333;
         }
@@ -193,65 +193,64 @@
             line-height: 1.6;
         }
 
-        /* Skills Section */
-        .skills-grid {
+        /* Skills Section - Simplified */
+        .skills-overview {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 6rem;
         }
 
-        .skill-card {
+        .skill-category {
             background: #111111;
-            padding: 2.5rem;
+            padding: 2rem;
             border: 1px solid #222;
             transition: all 0.3s ease;
-            position: relative;
         }
 
-        .skill-card:hover {
+        .skill-category:hover {
             border-color: #444;
             background: #151515;
         }
 
-        .skill-card h3 {
+        .skill-category h3 {
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             color: #ffffff;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 400;
         }
 
-        .skill-card i {
+        .skill-category i {
             color: #888;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .skill-items {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
+            gap: 0.7rem;
         }
 
         .skill-tag {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 0.6rem 1.2rem;
-            font-size: 0.9rem;
-            border: 1px solid #333;
-            font-weight: 300;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+    background: #1a1a1a;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border: 1px solid #333;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
-        .skill-tag:hover {
-            border-color: #666;
-            background: #222;
-        }
+.skill-tag:hover {
+    border-color: #666;
+    background: #222;
+}
 
-        /* Experience Section */
+        /* Experience Section - More Concise */
         .experience {
             margin-bottom: 6rem;
         }
@@ -263,9 +262,9 @@
 
         .timeline-item {
             background: #111111;
-            padding: 2.5rem;
+            padding: 2rem;
             border: 1px solid #222;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             transition: all 0.3s ease;
         }
 
@@ -278,13 +277,13 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             flex-wrap: wrap;
             gap: 1rem;
         }
 
         .job-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 400;
             color: #ffffff;
         }
@@ -292,142 +291,382 @@
         .job-company {
             color: #888;
             font-weight: 300;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .job-date {
             background: #1a1a1a;
-            padding: 0.4rem 1.2rem;
-            font-size: 0.85rem;
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
             font-weight: 300;
             letter-spacing: 0.5px;
             border: 1px solid #333;
         }
 
-        .timeline-item ul {
-            list-style: none;
-            margin-top: 1.2rem;
-        }
-
-        .timeline-item li {
-            padding: 0.4rem 0;
+        .timeline-item p {
             color: #888;
-            position: relative;
-            padding-left: 1.8rem;
+            margin-bottom: 1rem;
             line-height: 1.6;
         }
 
-        .timeline-item li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #888;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-bottom: 6rem;
-        }
-
-        .project-card {
-            background: #111111;
-            border: 1px solid #222;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            border-color: #444;
-            background: #151515;
-        }
-
-        .project-content {
-            padding: 2.5rem;
-        }
-
-        .project-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-icon {
-            width: 50px;
-            height: 50px;
-            background: #1a1a1a;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1.2rem;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            border: 1px solid #333;
-            color: #888;
-        }
-
-        .project-title {
-            flex: 1;
-        }
-
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
+        .highlight-point {
+            color: #fff;
             font-weight: 400;
         }
 
-        .project-tech {
-            color: #888;
-            font-size: 0.9rem;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
+        /* Projects Section - Expandable */
+.expandable-projects {
+    margin-bottom: 6rem;
+}
 
-        .project-description {
-            color: #888;
-            margin-bottom: 1.8rem;
-            line-height: 1.6;
-            font-weight: 300;
-        }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
 
-        .project-result {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #ccc;
-            padding: 1rem;
-            margin-bottom: 1.8rem;
-            font-size: 0.9rem;
-            font-weight: 300;
-            line-height: 1.5;
-        }
+.project-card {
+    background: #111111;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+}
 
-        .project-links {
-            display: flex;
+.project-card:hover {
+    border-color: #444;
+    background: #151515;
+    transform: translateY(-5px);
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.2rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    border: 1px solid #333;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    border-color: #666;
+    color: #fff;
+}
+
+.project-title {
+    flex: 1;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.project-tech {
+    color: #888;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.project-description {
+    color: #888;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.project-result {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #888;
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #1a1a1a;
+}
+
+.project-links a:hover {
+    color: #fff;
+    border-color: #666;
+    background: #222;
+}
+
+/* Expandable Projects Functionality */
+.projects-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.toggle-btn {
+    background: #1a1a1a;
+    color: #888;
+    border: 1px solid #333;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 4px;
+    font-weight: 300;
+}
+
+.toggle-btn:hover {
+    border-color: #666;
+    background: #222;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hidden-projects {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.hidden-projects.show {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project Card Animations */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.project-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+    .projects-grid,
+    .hidden-projects.show {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .project-links a {
+        justify-content: center;
+    }
+    
+    .toggle-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+    }
+}
+        /* Quick Facts Section */
+        .quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
+            margin: 4rem 0;
         }
 
-        .project-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
+        .fact-card {
+            background: #111111;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #222;
+        }
+
+        .fact-number {
+            font-size: 2rem;
+            font-weight: 350;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .fact-label {
             color: #888;
-            text-decoration: none;
-            font-weight: 300;
-            transition: all 0.3s ease;
             font-size: 0.9rem;
         }
 
-        .project-links a:hover {
-            color: #fff;
-        }
+        /* Academics Section - Horizontal Layout */
+.academics {
+    margin-bottom: 6rem;
+}
 
-        /* Academics Section */
-        .academics {
-            margin-bottom: 6rem;
-        }
+.academics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.academic-item {
+    background: #111111;
+    padding: 2.5rem;
+    border: 1px solid #222;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.academic-item:hover {
+    border-color: #444;
+    background: #151515;
+    transform: translateY(-5px);
+}
+
+.academic-icon {
+    width: 80px;
+    height: 80px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border: 1px solid #333;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.academic-item:hover .academic-icon {
+    border-color: #666;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.academic-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.academic-item p {
+    color: #888;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-weight: 300;
+    flex-grow: 1;
+}
+
+.academic-item .btn {
+    margin-top: auto;
+}
+
+/* Responsive Design for Academics */
+@media (max-width: 768px) {
+    .academics-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .academic-item {
+        padding: 2rem;
+    }
+    
+    .academic-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .academic-item {
+        padding: 1.5rem;
+    }
+    
+    .academic-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .academic-item p {
+        font-size: 0.9rem;
+    }
+}
 
         /* Contact Section */
         .contact-grid {
@@ -440,7 +679,7 @@
 
         .contact-card {
             background: #111111;
-            padding: 2.5rem;
+            padding: 2rem;
             text-align: center;
             border: 1px solid #222;
             transition: all 0.3s ease;
@@ -488,7 +727,7 @@
         footer {
             background: #0a0a0a;
             border-top: 1px solid #333;
-            padding: 4rem 0 3rem;
+            padding: 3rem 0 2rem;
             text-align: center;
         }
 
@@ -507,7 +746,7 @@
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 2rem;
             margin: 2rem 0;
             flex-wrap: wrap;
         }
@@ -533,31 +772,18 @@
             font-weight: 300;
         }
 
-        /* Scroll Animations */
-        .skill-card,
+        /* Animations */
+        .skill-category,
         .timeline-item,
         .project-card,
-        .contact-card {
+        .contact-card,
+        .fact-card {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease;
         }
 
-        .skill-card.animate,
-        .timeline-item.animate,
-        .project-card.animate,
-        .contact-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-header {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
-        }
-
-        .section-header.animate {
+        .animate {
             opacity: 1;
             transform: translateY(0);
         }
@@ -586,10 +812,6 @@
             .hero h1 {
                 font-size: 2.8rem;
             }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 768px) {
@@ -606,8 +828,7 @@
             }
             
             .btn-group {
-                flex-direction: column;
-                align-items: flex-start;
+                justify-content: center;
             }
             
             .job-meta {
@@ -621,9 +842,16 @@
             body {
                 padding: 0 1rem;
             }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-facts {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        /* Selection color */
         ::selection {
             background: #333;
             color: #fff;
@@ -634,38 +862,37 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
+            <div class="logo">Sai Alekhya Ravi</div>
             <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#academics">Academics</a></li>
-                <li><a href="#contact">Connect</a></li>
+                <li><a href="#academics">Academics</a></li> 
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero bg-pattern">
+    <section id="hero" class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-graduation-cap"></i>
-                    Master's in Computer & Information Science
+                    Master's in Computer Science
                 </div>
-                <h1>Sai Alekhya Ravi</h1>
+                <h1>About me</h1>
                 <p class="hero-subtitle">My comprehensive computer science education has equipped me with a <span class="highlight">versatile, first-principles understanding of technology</span>. I am not limited to a single domain but am instead seeking a role where I can apply this <span class="highlight">foundational strength</span> to a variety of technical challenges. My goal is to join an innovative team where I can immediately leverage my <span class="highlight">problem-solving skills</span> and quickly master new specialties to deliver <span class="highlight">impactful results</span>.</p>
                 <div class="btn-group">
-                    <a href="#projects" class="btn">
-                        <i class="fas fa-code-branch"></i>
-                        Explore My Work
-                    </a>
-                    <a href="#contact" class="btn">
-                        <i class="fas fa-file-alt"></i>
-                        Contact Me
-                    </a>
-                </div>
+    <a href="Sai Alekhya Ravi Resume.pdf" class="btn" download>
+        <i class="fas fa-download"></i>
+        Download Resume
+    </a>
+    <a href="#contact" class="btn">
+        <i class="fas fa-file-alt"></i>
+        Contact Me
+    </a>
+</div>
             </div>
             <div class="hero-image">
                 <img src="DSC_7119.jpg" alt="Sai Alekhya Ravi" class="profile-picture">
@@ -673,472 +900,361 @@
         </div>
     </section>
 
+    <!-- Quick Facts -->
+    <div class="quick-facts">
+        <div class="fact-card">
+            <div class="fact-number">7+</div>
+            <div class="fact-label">Projects Completed</div>
+        </div>
+        <div class="fact-card">
+            <div class="fact-number">3</div>
+            <div class="fact-label">Internships</div>
+        </div>
+        <div class="fact-card">
+            <div class="fact-number">10+</div>
+            <div class="fact-label">Technologies</div>
+        </div>
+        <div class="fact-card">
+            <div class="fact-number">2</div>
+            <div class="fact-label">Degrees</div>
+        </div>
+    </div>
+
     <!-- Skills Section -->
     <section id="skills">
         <div class="section-header">
-            <h2>Technical Skills</h2>
-            <p>A comprehensive suite of technologies and methodologies for full-stack development and data engineering</p>
+            <h2>Technical Expertise</h2>
+            <p>Full-stack development with focus on scalable solutions and data engineering</p>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3><i class="fas fa-layer-group"></i> Core Technologies</h3>
+        <div class="skills-overview">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Development</h3>
                 <div class="skill-items">
-                    <span class="skill-tag" data-target="projects">Python</span>
-                    <span class="skill-tag" data-target="projects">Java</span>
-                    <span class="skill-tag" data-target="experience">JavaScript</span>
-                    <span class="skill-tag" data-target="projects">SQL</span>
-                    <span class="skill-tag" data-target="experience">HTML5/CSS3</span>
-                    <span class="skill-tag" data-target="projects">REST APIs</span>
-                    <span class="skill-tag" data-target="projects">Git</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">Node.js</span>
                 </div>
             </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-tools"></i> Frameworks & Platforms</h3>
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Data & Cloud</h3>
                 <div class="skill-items">
-                    <span class="skill-tag" data-target="projects">Spring Boot</span>
-                    <span class="skill-tag" data-target="experience">React</span>
-                    <span class="skill-tag" data-target="projects">Node.js</span>
-                    <span class="skill-tag" data-target="projects">Android SDK</span>
-                    <span class="skill-tag" data-target="projects">Firebase</span>
-                    <span class="skill-tag" data-target="projects">Docker</span>
-                    <span class="skill-tag" data-target="projects">Django</span>
-                    <span class="skill-tag" data-target="projects">Azure Cloud</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">PySpark</span>
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">ETL</span>
+                    <span class="skill-tag">Docker</span>
                 </div>
             </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-chart-line"></i> Data & Analytics</h3>
+            <div class="skill-category">
+                <h3><i class="fas fa-robot"></i> AI/ML</h3>
                 <div class="skill-items">
-                    <span class="skill-tag" data-target="projects">Pandas</span>
-                    <span class="skill-tag" data-target="projects">NumPy</span>
-                    <span class="skill-tag" data-target="projects">scikit-learn</span>
-                    <span class="skill-tag" data-target="projects">MySQL</span>
-                    <span class="skill-tag" data-target="projects">SQLite</span>
-                    <span class="skill-tag" data-target="projects">Data Visualization</span>
-                    <span class="skill-tag" data-target="projects">PySpark</span>
-                    <span class="skill-tag" data-target="projects">ETL Pipelines</span>
-                    <span class="skill-tag" data-target="projects">Data Analysis</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">CNN</span>
+                    <span class="skill-tag">NLP</span>
                 </div>
             </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-robot"></i> Machine Learning & AI</h3>
+            <div class="skill-category">
+                <h3><i class="fas fa-mobile"></i> Mobile & Web</h3>
                 <div class="skill-items">
-                    <span class="skill-tag" data-target="experience">Machine Learning</span>
-                    <span class="skill-tag" data-target="projects">Deep Learning</span>
-                    <span class="skill-tag" data-target="projects">CNN</span>
-                    <span class="skill-tag" data-target="projects">Random Forest</span>
-                    <span class="skill-tag" data-target="projects">XGBoost</span>
-                    <span class="skill-tag" data-target="academics">NLP</span>
-                    <span class="skill-tag" data-target="academics">BERT</span>
-                    <span class="skill-tag" data-target="experience">Model Evaluation</span>
-                    <span class="skill-tag" data-target="experience">Feature Engineering</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-shield-alt"></i> Security & Cryptography</h3>
-                <div class="skill-items">
-                    <span class="skill-tag" data-target="academics">Cybersecurity</span>
-                    <span class="skill-tag" data-target="experience">Network Security</span>
-                    <span class="skill-tag" data-target="projects">Cryptography</span>
-                    <span class="skill-tag" data-target="projects">AES Encryption</span>
-                    <span class="skill-tag" data-target="projects">TOTP</span>
-                    <span class="skill-tag" data-target="projects">Digital Forensics</span>
-                    <span class="skill-tag" data-target="experience">Vulnerability Assessment</span>
-                    <span class="skill-tag" data-target="experience">Penetration Testing</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                <div class="skill-items">
-                    <span class="skill-tag" data-target="projects">Azure Data Factory</span>
-                    <span class="skill-tag" data-target="projects">Azure Databricks</span>
-                    <span class="skill-tag" data-target="projects">Azure Synapse</span>
-                    <span class="skill-tag" data-target="projects">Cloud Computing</span>
-                    <span class="skill-tag" data-target="projects">Big Data Analytics</span>
-                    <span class="skill-tag" data-target="projects">CI/CD</span>
-                    <span class="skill-tag" data-target="projects">Containerization</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-mobile"></i> Mobile & Web Development</h3>
-                <div class="skill-items">
-                    <span class="skill-tag" data-target="projects">Android Development</span>
-                    <span class="skill-tag" data-target="experience">Responsive Design</span>
-                    <span class="skill-tag" data-target="experience">Single Page Applications</span>
-                    <span class="skill-tag" data-target="projects">Material Design</span>
-                    <span class="skill-tag" data-target="projects">Google Maps API</span>
-                    <span class="skill-tag" data-target="experience">Performance Optimization</span>
-                    <span class="skill-tag" data-target="experience">Cross-browser Compatibility</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-cogs"></i> Specialized Domains</h3>
-                <div class="skill-items">
-                    <span class="skill-tag" data-target="academics">Blockchain Technology</span>
-                    <span class="skill-tag" data-target="academics">Cryptocurrency</span>
-                    <span class="skill-tag" data-target="academics">Digital Payments</span>
-                    <span class="skill-tag" data-target="projects">IoT Systems</span>
-                    <span class="skill-tag" data-target="projects">GPS Tracking</span>
-                    <span class="skill-tag" data-target="projects">Healthcare Applications</span>
-                    <span class="skill-tag" data-target="projects">Supply Chain Management</span>
+                    <span class="skill-tag">Android</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">Git</span>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Experience Section -->
+    <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="section-header">
             <h2>Professional Experience</h2>
-            <p>A track record of delivering impactful solutions and driving technological innovation</p>
+            <p>Practical experience delivering technical solutions and driving innovation</p>
         </div>
         <div class="experience-timeline">
             <div class="timeline-item">
                 <div class="job-meta">
                     <div>
-                        <div class="job-title">Freelance Web Developer & Technical Consultant</div>
-                        <div class="job-company">Washy Washy World | New Bedford, MA</div>
+                        <div class="job-title">Freelance Web Developer</div>
+                        <div class="job-company">Washy Washy World</div>
                     </div>
-                    <div class="job-date">08/05/2025 - 10/10/2025</div>
+                    <div class="job-date">2025</div>
                 </div>
-                <ul>
-                    <li>Architected and deployed a responsive, bilingual Single Page Application serving multiple business locations with 500+ monthly visitors</li>
-                    <li>Engineered dynamic content loading systems that reduced page load times by 60% through optimized asset delivery and caching strategies</li>
-                    <li>Implemented real-time translation systems and multi-language support to cater to diverse customer demographics</li>
-                    <li>Optimized mobile experience achieving 95+ Google Mobile-Friendly score through responsive design principles</li>
-                    <li><a href="https://washywashyworld.github.io/" target="_blank" class="btn">
-                        <i class="fas fa-link"></i>Website Link</a>
-                    </li>
-                </ul>
+                <p>Built responsive bilingual SPA serving 500+ monthly visitors with <span class="highlight-point">60% faster load times</span> through optimized asset delivery.</p>
+                <div class="project-links">
+                    <a href="https://washywashyworld.github.io/" target="_blank" class="btn">
+                        <i class="fas fa-link"></i>View Website
+                    </a>
+                </div>
             </div>
 
             <div class="timeline-item">
                 <div class="job-meta">
                     <div>
-                        <div class="job-title">Internship - Network Security</div>
-                        <div class="job-company">Ram Innovative Info Tech - India</div>
+                        <div class="job-title">Network Security Intern</div>
+                        <div class="job-company">Ram Innovative Info Tech</div>
                     </div>
-                    <div class="job-date">09/12/2022 - 09/17/2022</div>
+                    <div class="job-date">2022</div>
                 </div>
-                <ul>
-                    <li>Completed comprehensive 6-day training program focusing on network security principles and cybersecurity protocols</li>
-                    <li>Gained practical experience in network vulnerability assessment and penetration testing methodologies</li>
-                    <li>Implemented security measures including firewalls, intrusion detection systems, and encryption protocols</li>
-                    <li>Studied network attack vectors including DDoS, phishing, and man-in-the-middle attacks with corresponding defense strategies</li>
-                    <li>Learned cryptographic techniques including symmetric and asymmetric encryption, digital signatures, and SSL/TLS protocols</li>
-                    <li>Participated in hands-on labs for network monitoring, traffic analysis, and security incident response</li>
-                    <li>Achieved Grade A+ for exceptional performance and demonstrated expertise in network security concepts</li>
-                    <li><a href="Network Security Internship.jpeg" target="_blank" class="btn">
-                        <i class="fas fa-certificate"></i>Network Security Certificate</a>
-                    </li>
-                </ul>
+                <p>Completed intensive training in network security, vulnerability assessment, and penetration testing. <span class="highlight-point">Grade A+</span> performance.</p>
             </div>
 
             <div class="timeline-item">
                 <div class="job-meta">
                     <div>
-                        <div class="job-title">Internship - Data Science & Machine Learning</div>
-                        <div class="job-company">Ram Innovative Info Tech - India</div>
+                        <div class="job-title">Data Science Intern</div>
+                        <div class="job-company">Ram Innovative Info Tech</div>
                     </div>
-                    <div class="job-date">09/05/2022 - 09/10/2022</div>
+                    <div class="job-date">2022</div>
                 </div>
-                <ul>
-                    <li>Completed intensive 6-day training program focusing on practical applications of data science and machine learning concepts</li>
-                    <li>Mastered data preprocessing techniques including data cleaning, feature engineering, and normalization for model optimization</li>
-                    <li>Implemented and evaluated multiple machine learning algorithms including Linear Regression, Decision Trees, and Random Forests</li>
-                    <li>Developed predictive models using Python libraries including Pandas, NumPy, and Scikit-learn for real-world datasets</li>
-                    <li>Gained hands-on experience in model evaluation metrics, cross-validation, and hyperparameter tuning</li>
-                    <li>Achieved Grade A+ for outstanding performance and comprehensive understanding of ML concepts</li>
-                    <li><a href="Data Science & Machine Learning Internship.jpeg" target="_blank" class="btn">
-                        <i class="fas fa-certificate"></i>Data Science & Machine Learning Certificate</a>
-                    </li>
-                </ul>
+                <p>Developed machine learning models using Python, Pandas, and Scikit-learn. <span class="highlight-point">Grade A+</span> for comprehensive ML understanding.</p>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="section-header">
-            <h2>My Projects</h2>
-            <p>Selected projects demonstrating technical proficiency and problem-solving capabilities</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Pill Reminder Application</h3>
-                            <div class="project-tech">Android Studio • Java • SQLite • Material Design</div>
-                        </div>
+    <section id="projects" class="expandable-projects">
+    <div class="section-header">
+        <h2>My Projects</h2>
+        <p>Selected projects demonstrating technical proficiency and problem-solving capabilities</p>
+    </div>
+    
+    <!-- Featured Projects (always visible) -->
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <p class="project-description">A comprehensive native Android application for medication schedule management featuring intelligent notifications, dosage tracking, and user adherence analytics.</p>
-                    <div class="project-result">
-                        <strong>Engineering Achievement:</strong> 30% reduction in user tracking errors through optimized notification algorithms
-                    </div>
-                    <div class="project-links">
-                        <a href="Pill Reminder.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>
+                    <div class="project-title">
+                        <h3>Pill Reminder Application</h3>
+                        <div class="project-tech">Android Studio • Java • SQLite • Material Design</div>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-satellite"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Vehicle Tracking using Driver's Mobile</h3>
-                            <div class="project-tech">Java • Google Maps API • Firebase • REST Architecture</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Enterprise-grade tracking system featuring real-time location monitoring, route optimization, and comprehensive analytics dashboard for fleet management.</p>
-                    <div class="project-result">
-                        <strong>Performance Metric:</strong> 25% improvement in location accuracy through advanced data processing algorithms
-                    </div>
-                    <div class="project-links">
-                        <a href="VEHICLE TRACKING.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>    
-                    </div>
+                <p class="project-description">A comprehensive native Android application for medication schedule management featuring intelligent notifications, dosage tracking, and user adherence analytics.</p>
+                <div class="project-result">
+                    <strong>Engineering Achievement:</strong> 30% reduction in user tracking errors through optimized notification algorithms
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Dynamic OTP-Based Secure Message Locker</h3>
-                            <div class="project-tech">Python • AES Encryption • TOTP • Firebase • Tkinter</div>
-                        </div>
-                    </div>
-                    <p class="project-description">A secure messaging application combining AES encryption with Time-based One-Time Password authentication. Features QR code generation, rate limiting, and comprehensive security auditing.</p>
-                    <div class="project-result">
-                        <strong>Security Excellence:</strong> Multi-layered encryption with dynamic authentication and brute-force protection
-                    </div>
-                    <div class="project-links">
-                        <a href="Dynamic OTP-Based Secure Message Locker.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Music Genre Classification using ML</h3>
-                            <div class="project-tech">Python • CNN • Scikit-learn • Pandas • Librosa</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Machine learning system for classifying music genres from audio data using Convolutional Neural Networks. Processed GTZAN dataset with 10,000 samples across 10 genres achieving 90% accuracy with XGBoost.</p>
-                    <div class="project-result">
-                        <strong>ML Achievement:</strong> 90% classification accuracy using ensemble methods and CNN architectures
-                    </div>
-                    <div class="project-links">
-                        <a href="Identifying the Genre of a Song.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Traffic Prediction using Machine Learning</h3>
-                            <div class="project-tech">Python • Random Forest • Django • Data Analysis</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Web-based traffic condition prediction system using Random Forest classifier. Integrates weather data, temporal patterns, and geographic zones to forecast traffic congestion with 96% accuracy.</p>
-                    <div class="project-result">
-                        <strong>Prediction Accuracy:</strong> 96% accurate traffic forecasting using ensemble learning methods
-                    </div>
-                    <div class="project-links">
-                        <a href="Predicting Traffic Condition.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Olympic Data Analytics Platform</h3>
-                            <div class="project-tech">Azure • PySpark • Data Factory • Databricks • Synapse Analytics</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Big data analytics platform processing 271,116 athlete records. Built end-to-end ETL pipelines using Azure services for performance analysis, athlete profiling, and medal prediction.</p>
-                    <div class="project-result">
-                        <strong>Data Engineering:</strong> Scalable cloud architecture handling large-scale sports analytics
-                    </div>
-                    <div class="project-links">
-                        <a href="Olympic Data Analytics.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Digital Forensics with Autopsy</h3>
-                            <div class="project-tech">Digital Forensics • File System Analysis • Timeline Analysis</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Comprehensive digital forensics investigation using Autopsy tool. Implemented keyword searching, timeline analysis, and hash filtering for forensic evidence extraction and analysis.</p>
-                    <div class="project-result">
-                        <strong>Forensic Analysis:</strong> Advanced file system dissection and evidence correlation techniques
-                    </div>
-                    <div class="project-links">
-                        <a href="Autopsy's Features Analysis.pdf" target="_blank" class="btn">
-                            <i class="fas fa-code"></i>
-                            Technical Documentation
-                        </a>
-                    </div>
+                <div class="project-links">
+                    <a href="Pill Reminder.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Vehicle Tracking using Driver's Mobile</h3>
+                        <div class="project-tech">Java • Google Maps API • Firebase • REST Architecture</div>
+                    </div>
+                </div>
+                <p class="project-description">Enterprise-grade tracking system featuring real-time location monitoring, route optimization, and comprehensive analytics dashboard for fleet management.</p>
+                <div class="project-result">
+                    <strong>Performance Metric:</strong> 25% improvement in location accuracy through advanced data processing algorithms
+                </div>
+                <div class="project-links">
+                    <a href="VEHICLE TRACKING.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>    
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Dynamic OTP-Based Secure Message Locker</h3>
+                        <div class="project-tech">Python • AES Encryption • TOTP • Firebase • Tkinter</div>
+                    </div>
+                </div>
+                <p class="project-description">A secure messaging application combining AES encryption with Time-based One-Time Password authentication. Features QR code generation, rate limiting, and comprehensive security auditing.</p>
+                <div class="project-result">
+                    <strong>Security Excellence:</strong> Multi-layered encryption with dynamic authentication and brute-force protection
+                </div>
+                <div class="project-links">
+                    <a href="Dynamic OTP-Based Secure Message Locker.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden Projects (expandable) -->
+    <div class="hidden-projects" id="hiddenProjects">
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Music Genre Classification using ML</h3>
+                        <div class="project-tech">Python • CNN • Scikit-learn • Pandas • Librosa</div>
+                    </div>
+                </div>
+                <p class="project-description">Machine learning system for classifying music genres from audio data using Convolutional Neural Networks. Processed GTZAN dataset with 10,000 samples across 10 genres achieving 90% accuracy with XGBoost.</p>
+                <div class="project-result">
+                    <strong>ML Achievement:</strong> 90% classification accuracy using ensemble methods and CNN architectures
+                </div>
+                <div class="project-links">
+                    <a href="Identifying the Genre of a Song.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Traffic Prediction using Machine Learning</h3>
+                        <div class="project-tech">Python • Random Forest • Django • Data Analysis</div>
+                    </div>
+                </div>
+                <p class="project-description">Web-based traffic condition prediction system using Random Forest classifier. Integrates weather data, temporal patterns, and geographic zones to forecast traffic congestion with 96% accuracy.</p>
+                <div class="project-result">
+                    <strong>Prediction Accuracy:</strong> 96% accurate traffic forecasting using ensemble learning methods
+                </div>
+                <div class="project-links">
+                    <a href="Predicting Traffic Condition.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Olympic Data Analytics Platform</h3>
+                        <div class="project-tech">Azure • PySpark • Data Factory • Databricks • Synapse Analytics</div>
+                    </div>
+                </div>
+                <p class="project-description">Big data analytics platform processing 271,116 athlete records. Built end-to-end ETL pipelines using Azure services for performance analysis, athlete profiling, and medal prediction.</p>
+                <div class="project-result">
+                    <strong>Data Engineering:</strong> Scalable cloud architecture handling large-scale sports analytics
+                </div>
+                <div class="project-links">
+                    <a href="Olympic Data Analytics.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Digital Forensics with Autopsy</h3>
+                        <div class="project-tech">Digital Forensics • File System Analysis • Timeline Analysis</div>
+                    </div>
+                </div>
+                <p class="project-description">Comprehensive digital forensics investigation using Autopsy tool. Implemented keyword searching, timeline analysis, and hash filtering for forensic evidence extraction and analysis.</p>
+                <div class="project-result">
+                    <strong>Forensic Analysis:</strong> Advanced file system dissection and evidence correlation techniques
+                </div>
+                <div class="project-links">
+                    <a href="Autopsy's Features Analysis.pdf" target="_blank" class="btn">
+                        <i class="fas fa-code"></i>
+                        Technical Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toggle Button -->
+    <div class="projects-toggle">
+        <button class="toggle-btn" id="projectsToggle">
+            <i class="fas fa-plus"></i>
+            View More Projects
+        </button>
+    </div>
+</section>
 
     <!-- Academic Contributions & Certifications Section -->
-    <section id="academics" class="academics">
-        <div class="section-header">
-            <h2>Academic Contributions & Certifications</h2>
-            <p>Continuous learning through research, seminars, and professional certifications</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-coins"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Cryptocurrency Seminar Presentation</h3>
-                            <div class="project-tech">Blockchain Technology • Digital Currency • Financial Systems</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Presented a comprehensive technical seminar on cryptocurrency as part of my Bachelor's degree requirements. This in-depth research covered the fundamental principles of digital currencies, blockchain architecture, and their disruptive potential in traditional financial systems.</p>
-                    
-                    <div class="project-result">
-                        <strong>Key Research Contributions:</strong>
-                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li>Analyzed cryptocurrency architecture including blockchain technology, peer-to-peer networks, and cryptographic security</li>
-                            <li>Examined real-world applications from peer-to-peer payments to decentralized finance (DeFi)</li>
-                            <li>Evaluated advantages (decentralization, security, global accessibility) and limitations (volatility, scalability, regulatory challenges)</li>
-                            <li>Explored future scope including CBDCs, mainstream adoption, and environmental sustainability improvements</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="CryptoCurrency-SeminarProject.pdf" target="_blank" class="btn">
-                            <i class="fas fa-file-pdf"></i>
-                            Seminar Report
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Cybersecurity Course Completion</h3>
-                            <div class="project-tech">Network Security • Threat Analysis • Security Protocols</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Successfully completed a comprehensive cybersecurity certification program, gaining expertise in fundamental security principles, threat mitigation strategies, and defensive security measures for modern digital infrastructure.</p>
-                    
-                    <div class="project-result">
-                        <strong>Course Coverage & Skills Developed:</strong>
-                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li>Network security fundamentals and vulnerability assessment</li>
-                            <li>Cryptographic techniques including encryption and digital signatures</li>
-                            <li>Security protocols implementation and best practices</li>
-                            <li>Threat analysis methodologies and risk assessment frameworks</li>
-                            <li>Incident response procedures and security auditing techniques</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="Cybersecurity Certificate.jpeg" target="_blank" class="btn">
-                            <i class="fas fa-certificate"></i>
-                            View Certificate
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="project-title">
-                            <h3>Research Paper Review: BERT for Sustainable Software Engineering</h3>
-                            <div class="project-tech">BERT • NLP • Software Requirements • Green Computing</div>
-                        </div>
-                    </div>
-                    <p class="project-description">Conducted a critical analysis of Ahmad F. Subahi's research paper "BERT-Based Approach for Greening Software Requirements Engineering Through Non-Functional Requirements" as part of CIS 580 - Paradigmatic Software Development coursework.</p>
-                    
-                    <div class="project-result">
-                        <strong>Critical Analysis & Insights:</strong>
-                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li>Evaluated the novel integration of BERT models for classifying Non-Functional Requirements (NFRs) related to sustainability</li>
-                            <li>Analyzed the expansion of PROMISE_exp dataset with socioeconomic and eco-technical sustainability factors</li>
-                            <li>Assessed the framework's potential to bridge software engineering practices with environmental sustainability goals</li>
-                            <li>Examined performance metrics (accuracy, precision, recall, F1 score) of the BERT-based classification model</li>
-                            <li>Identified implications for automated sustainability-driven software development processes</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="BERT-BAsed Approach (Review of Research Paper).pdf" target="_blank" class="btn">
-                            <i class="fas fa-graduation-cap"></i>
-                            Complete Review Document
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="academics" class="academics">
+    <div class="section-header">
+        <h2>Academic Contributions & Certifications</h2>
+        <p>Continuous learning through research, seminars, and professional certifications</p>
+    </div>
     
+    <div class="academics-grid">
+        <div class="academic-item">
+            <div class="academic-icon">
+                <i class="fas fa-coins"></i>
+            </div>
+            <h3>Cryptocurrency Research</h3>
+            <p>Presented comprehensive seminar on blockchain technology and digital currency systems, analyzing architecture and real-world applications.</p>
+            <a href="CryptoCurrency-SeminarProject.pdf" target="_blank" class="btn">
+                <i class="fas fa-file-pdf"></i>
+                View Report
+            </a>
+        </div>
+
+        <div class="academic-item">
+            <div class="academic-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Cybersecurity Certification</h3>
+            <p>Completed comprehensive security program covering network protection, threat analysis, and cryptographic protocols.</p>
+            <a href="Cybersecurity Certificate.jpeg" target="_blank" class="btn">
+                <i class="fas fa-certificate"></i>
+                View Certificate
+            </a>
+        </div>
+
+        <div class="academic-item">
+            <div class="academic-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>Research Paper Analysis</h3>
+            <p>Critically reviewed BERT-based approach for sustainable software engineering and NLP applications in requirements classification.</p>
+            <a href="BERT-BAsed Approach (Review of Research Paper).pdf" target="_blank" class="btn">
+                <i class="fas fa-graduation-cap"></i>
+                View Analysis
+            </a>
+        </div>
+    </div>
+</section>
     <!-- Contact Section -->
     <section id="contact">
         <div class="section-header">
             <h2>Get In Touch</h2>
-            <p>Open to technical collaborations, innovative projects, and engineering opportunities</p>
+            <p>Open to technical collaborations and engineering opportunities</p>
         </div>
         <div class="contact-grid">
             <div class="contact-card">
@@ -1170,86 +1286,71 @@
         <div class="footer-content">
             <div class="footer-logo">Sai Alekhya Ravi</div>
             <div class="footer-links">
-                <a href="#hero">About</a>
-                <a href="#skills">Technical Skills</a>
+                <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#academics">Academics</a>
-                <a href="#contact">Connect</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="copyright">
-                &copy; 2025 Sai Alekhya Ravi.
+                &copy; 2025 Sai Alekhya Ravi. Computer Science Graduate
             </div>
         </div>
     </footer>
 
     <script>
-// Complete functionality with scroll animations
-document.addEventListener('DOMContentLoaded', function() {
-    // ===== SCROLL ANIMATIONS =====
-    const animatedElements = document.querySelectorAll(
-        '.skill-card, .timeline-item, .project-card, .contact-card, .section-header'
-    );
-    
-    // Create intersection observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    }, {
-        threshold: 0.1, // Trigger when 10% of element is visible
-        rootMargin: '0px 0px -50px 0px' // Adjust trigger point
-    });
-    
-    // Observe all animated elements
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-
-    // ===== SKILL CLICK FUNCTIONALITY =====
-    const skillTags = document.querySelectorAll('.skill-tag');
-    
-    skillTags.forEach(tag => {
-        tag.addEventListener('click', function() {
-            const targetSection = this.getAttribute('data-target');
-            const targetElement = document.getElementById(targetSection);
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll animations
+            const animatedElements = document.querySelectorAll(
+                '.skill-category, .timeline-item, .project-card, .contact-card, .fact-card'
+            );
             
-            if (targetElement) {
-                // Add visual feedback
-                this.style.transform = 'scale(0.95)';
-                this.style.backgroundColor = '#222';
-                
-                // Scroll to section
-                targetElement.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
                 });
-                
-                // Reset animation after click
-                setTimeout(() => {
-                    this.style.transform = '';
-                    this.style.backgroundColor = '';
-                }, 300);
-            }
-        });
-    });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
 
-    // ===== ENHANCED SMOOTH SCROLLING FOR NAVIGATION =====
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 });
+            });
+        });
+        // Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('projectsToggle');
+    const hiddenProjects = document.getElementById('hiddenProjects');
+    
+    if (toggleBtn && hiddenProjects) {
+        toggleBtn.addEventListener('click', function() {
+            hiddenProjects.classList.toggle('show');
+            
+            if (hiddenProjects.classList.contains('show')) {
+                toggleBtn.innerHTML = '<i class="fas fa-minus"></i> View Less Projects';
+            } else {
+                toggleBtn.innerHTML = '<i class="fas fa-plus"></i> View More Projects';
             }
         });
-    });
+    }
 });
-</script>
+    </script>
 </body>
 </html>
