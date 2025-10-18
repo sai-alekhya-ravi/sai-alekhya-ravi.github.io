@@ -249,6 +249,14 @@
     border-color: #666;
     background: #222;
 }
+        .project-card {
+    transition: all 0.3s ease;
+}
+
+/* Add smooth transition for the highlight effect */
+.project-card {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
 
         /* Experience Section - More Concise */
         .experience {
@@ -921,56 +929,56 @@
     </div>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-header">
-            <h2>Technical Expertise</h2>
-            <p>Full-stack development with focus on scalable solutions and data engineering</p>
-        </div>
-        <div class="skills-overview">
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Development</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Spring Boot</span>
-                    <span class="skill-tag">Node.js</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-database"></i> Data & Cloud</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">PySpark</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">ETL</span>
-                    <span class="skill-tag">Docker</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-robot"></i> AI/ML</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">scikit-learn</span>
-                    <span class="skill-tag">CNN</span>
-                    <span class="skill-tag">NLP</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-mobile"></i> Mobile & Web</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">Android</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">REST APIs</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">Git</span>
-                </div>
+<section id="skills">
+    <div class="section-header">
+        <h2>Technical Expertise</h2>
+        <p>Full-stack development with focus on scalable solutions and data engineering</p>
+    </div>
+    <div class="skills-overview">
+        <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Development</h3>
+            <div class="skill-items">
+                <span class="skill-tag" data-target="projects">Python</span>
+                <span class="skill-tag" data-target="projects">Java</span>
+                <span class="skill-tag" data-target="projects">JavaScript</span>
+                <span class="skill-tag" data-target="projects">React</span>
+                <span class="skill-tag" data-target="projects">Spring Boot</span>
+                <span class="skill-tag" data-target="projects">Node.js</span>
             </div>
         </div>
-    </section>
+        <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Data & Cloud</h3>
+            <div class="skill-items">
+                <span class="skill-tag" data-target="projects">SQL</span>
+                <span class="skill-tag" data-target="projects">PySpark</span>
+                <span class="skill-tag" data-target="projects">Azure</span>
+                <span class="skill-tag" data-target="projects">Pandas</span>
+                <span class="skill-tag" data-target="projects">ETL</span>
+                <span class="skill-tag" data-target="projects">Docker</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-robot"></i> AI/ML</h3>
+            <div class="skill-items">
+                <span class="skill-tag" data-target="projects">Machine Learning</span>
+                <span class="skill-tag" data-target="projects">Deep Learning</span>
+                <span class="skill-tag" data-target="projects">scikit-learn</span>
+                <span class="skill-tag" data-target="projects">CNN</span>
+                <span class="skill-tag" data-target="projects">NLP</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-mobile"></i> Mobile & Web</h3>
+            <div class="skill-items">
+                <span class="skill-tag" data-target="projects">Android</span>
+                <span class="skill-tag" data-target="projects">Firebase</span>
+                <span class="skill-tag" data-target="projects">REST APIs</span>
+                <span class="skill-tag" data-target="projects">HTML/CSS</span>
+                <span class="skill-tag" data-target="projects">Git</span>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
@@ -1351,6 +1359,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+        // ===== ENHANCED SKILL CLICK FUNCTIONALITY =====
+const skillTags = document.querySelectorAll('.skill-tag');
+
+skillTags.forEach(tag => {
+    tag.addEventListener('click', function() {
+        const skillName = this.textContent.toLowerCase();
+        const targetSection = this.getAttribute('data-target');
+        
+        // Scroll to appropriate section first
+        const sectionMap = {
+            'projects': 'projects',
+            'experience': 'experience', 
+            'academics': 'academics'
+        };
+        
+        const targetId = sectionMap[targetSection];
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            // Visual feedback
+            this.style.transform = 'scale(0.95)';
+            this.style.backgroundColor = '#222';
+            
+            // Scroll to section
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // If it's projects section, you could add highlighting logic here
+            if (targetId === 'projects') {
+                highlightRelevantProjects(skillName);
+            }
+            
+            // Reset animation
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.backgroundColor = '';
+            }, 300);
+        }
+    });
+});
+
+// Optional: Function to highlight projects containing the skill
+function highlightRelevantProjects(skill) {
+    const projects = document.querySelectorAll('.project-card');
+    
+    projects.forEach(project => {
+        const projectText = project.textContent.toLowerCase();
+        if (projectText.includes(skill)) {
+            project.style.borderColor = '#666';
+            project.style.boxShadow = '0 0 20px rgba(102, 102, 102, 0.3)';
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+                project.style.borderColor = '';
+                project.style.boxShadow = '';
+            }, 3000);
+        }
+    });
+}
     </script>
 </body>
 </html>
